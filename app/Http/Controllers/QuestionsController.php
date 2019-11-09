@@ -25,6 +25,7 @@ class QuestionsController extends Controller
             ->select('questions.*', 'question_choices.*')
     		->where('category_id', request()->category_id)
     		->get();
+        //return result to axios 
     	return $questions;
     }
 }
